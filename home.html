@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>AudioVisual Discontinuity Demos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/style.css">
+	<style>
+	
+		video {
+			width:100%;
+			height:auto;
+			max-height:100%
+			}
+
+			.video-content {
+			height:100vh;
+			}
+
+.btn.btn-outline-primary {
+  color:  #e5daff;
+  border-color: #e5daff;
+}
+.btn.btn-outline-primary.focus,
+.btn.btn-outline-primary:focus {
+  color: #fff;
+  border-color: #450579;
+  outline: none;
+  box-shadow: none;
+}
+.btn.btn-outline-primary:hover {
+  color: #e5daff;
+  background-color: #450579;
+  border-color: #e5daff;
+  outline: none;
+  box-shadow: none;
+}
+.btn.btn-outline-primary.active,
+.btn.btn-outline-primary:active {
+  color: #e5daff;
+  background-color: #450579;
+  border-color: #e5daff;
+  outline: none;
+}
+.btn.btn-outline-primary.active.focus,
+.btn.btn-outline-primary.active:focus,
+.btn.btn-outline-primary.active:hover,
+.btn.btn-outline-primary:active.focus,
+.btn.btn-outline-primary:active:focus,
+.btn.btn-outline-primary:active:hover {
+  color: #fff;
+  background-color: #450579;
+  border-color: #450579;
+  outline: none;
+  box-shadow: none;
+}
+
+
+	/* .btn-outline-primary {
+		color: #e5daff;
+		border-color: #e5daff;
+	}
+
+	.btn-outline-primary:hover {
+		color: #212529;
+		background-color: #e5daff;
+		border-color: #e5daff;
+	}
+	.btn:active{
+    background:rgb(33, 3, 79);
+    color: white;
+	}
+
+	.btn-outline-primary.active,
+	.btn-outline-primary:active {
+	color: #fff;
+	background-color: #5cb85c;
+	border-color: #5cb85c;
+	outline: none;
+	} */
+
+	
+	</style>
+  </head>
+  <body>
+		
+		<div class="wrapper d-flex align-items-start">
+			<nav id="sidebar">
+				<div class="custom-menu">
+					<button type="button" id="sidebarCollapse" class="btn btn-primary">
+	          <i class="fa fa-bars"></i>
+					<span class="sr-only">Toggle Menu</span>
+					</button>
+				</div>
+				<div class="p-4 pt-5">
+		  		<h1><a href="index.html" class="logo">Visual</a></h1>
+				  
+				  <br >Number of Cubes:</br>
+				  <div id="objectnum" class="btn-group" role="group" >
+					<button id="1" type="button" class="btn btn-outline-primary active">One</button>
+					<button  id="2" type="button" class="btn btn-outline-primary">Two</button>
+				  </div>
+				  <br></br>
+				  <br><b>OBJECT 1 </b>
+				  <br>Discontinuities:</br>
+				  <div id="cont" class="btn-group" role="group" aria-label="Basic outlined example">
+					<button id="discont0" type="button" class="btn btn-outline-primary active">0</button>
+					<button  id="discont1" type="button" class="btn btn-outline-primary">1</button>
+					<button  id="discont2" type="button" class="btn btn-outline-primary">2</button>
+				  </div>
+				  <br></br>
+				  <br>Cube Size:</br>
+				  <div id="cubesize" class="btn-group" role="group" aria-label="Basic outlined example">
+					<button id="01" type="button" class="btn btn-outline-primary active">Small</button>
+					<button  id="1000" type="button" class="btn btn-outline-primary">Large</button>
+				  </div>
+				  <br></br>
+		
+				  <br>Visual Material:</br>
+				  <div id="mat" class="btn-group" role="group" aria-label="Basic outlined example">
+					<button id="plastic" type="button" class="btn btn-outline-primary active">Wood</button>
+					<button  id="wood" type="button" class="btn btn-outline-primary">Glass</button>
+				  </div>
+				  <br></br>
+				  <br></br>
+				  <br></br>
+				  <br></br>
+				  <br></br>
+				  <br></br>
+				  <br></br>
+				  <br></br>
+				  <br></br>
+				  <br></br>
+				  <br></br>
+				  <br></br>
+				  <br></br>
+				  <br></br>
+				  <br></br>
+				  
+
+
+				  
+				  <!-- <br>Sound:</br>
+				  <div id="sound" class="btn-group" role="group" aria-label="Basic outlined example">
+					<button id="on" type="button" class="btn btn-outline-primary">ON</button>
+					<button  id="off" type="button" class="btn btn-outline-primary">OFF</button>
+				  </div> -->
+				  <!-- <br>Sound Material:</br>
+				  <div id="soundmat" class="btn-group" role="group" aria-label="Basic outlined example">
+					<button id="plasticsound" type="button" class="btn btn-outline-primary">Plastic</button>
+					<button  id="woodsound" type="button" class="btn btn-outline-primary">Wood</button>
+				  </div> -->
+
+
+				
+				
+
+<!-- 
+				  objectnum,
+				  mass1,
+				  mass2,
+				  table1mat,
+				  table2mat,
+				  contobj1,
+				  contobj2,
+				  recordobj1,
+				  recordobj2,
+				  scrapesound1,
+				  scrapesound2,
+				  highdef, -->
+
+				  
+
+	      </div>
+    	</nav>
+
+        <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5 pt-5">
+			<!-- Button trigger modal -->
+			<button type="button" id="videobutton" onclick="setVideo()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+				Show Video
+			</button>
+			
+			<!-- Modal -->
+			<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-fullscreen modal-xl">
+				<div class="modal-content">
+					<div class="modal-header">
+					 
+					<button  type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<video id="showvideo" controls>
+							<source src="videos/visual_1_0_0_1_1_0_1_1_False_False_0_audio_1_0_0_1_1_2_1_1_False_False_0.mp4" type="video/mp4">
+							
+							<!-- <source src="movie.ogg" type="video/ogg"> -->
+						  Your browser does not support the video tag.
+						  </video>
+						  <p id="video-info">      </p>
+					</div>
+					<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			
+					</div>
+				</div>
+				</div>
+			</div>
+      </div>
+
+
+		<div class="wrapper d-flex align-items-end flex-column">
+			<nav id="sidebar">
+				<div class="custom-menu">
+					<!-- <button type="button" id="sidebarCollapse" class="btn pull-right"> -->
+	          <i class="fa fa-bars"></i>
+					<!-- <span class="sr-only">Toggle Menu</span> -->
+					</button>
+				</div>
+				<div class="p-4 pt-5">
+		  		<h1><a href="index.html" class="logo">Sound</a></h1>
+
+				  <br></br>
+				  <br></br>
+				  <br></br>
+				  
+				  <br>Discontinuities:</br>
+				  <div id="soundcont" class="btn-group" role="group" aria-label="Basic outlined example">
+					<button id="discont0" type="button" class="btn btn-outline-primary ">0</button>
+					<button  id="discont1" type="button" class="btn btn-outline-primary">1</button>
+					<button id="discont2" type="button" class="btn btn-outline-primary active">2</button>
+				</div>
+				<br></br>
+				<br>Sound Type:</br>
+				  <div id="soundtype" class="btn-group" role="group" aria-label="Basic outlined example">
+					<button id="physics" type="button" class="btn btn-outline-primary active">Physics</button>
+					<button  id="tones" type="button" class="btn btn-outline-primary">Tones</button>
+				  </div>
+				  <br></br>
+				  <br></br>
+
+				  <br>Mass:</br>
+				  <div id="mass" class="btn-group disabled" role="group" aria-label="Basic outlined example">
+					<button id="01" type="button" class="btn btn-outline-primary active">0.1</button>
+					<button  id="1000" type="button" class="btn btn-outline-primary">1000</button>
+				  </div>
+				  <br></br>
+		
+				  <br>Scrape Material:</br>
+				  <div id="scrapemat" class="btn-group disabled" role="group" aria-label="Basic outlined example">
+					<button id="plastic" type="button" class="btn btn-outline-primary active">Wood</button>
+					<button  id="wood" type="button" class="btn btn-outline-primary">Glass</button>
+				  </div>
+				  <br></br>
+		
+				  
+		
+					<br>Mass change mid-motion:</br>
+					<div id="masschange" class="btn-group disabled" role="group" aria-label="Basic outlined example">
+					  <button id="True" type="button" class="btn btn-outline-primary">TRUE</button>
+					  <button  id="False" type="button" class="btn btn-outline-primary active">FALSE</button>
+				  </div>
+				  <br></br>
+		
+				  <br>Mat change mid-motion:</br>
+					<div id="matchange" class="btn-group disabled" role="group" aria-label="Basic outlined example">
+					  <button id="True" type="button" class="btn btn-outline-primary ">TRUE</button>
+					  <button  id="False" type="button" class="btn btn-outline-primary active">FALSE</button>
+				  </div>
+				  <br></br>
+				  
+				  <br></br>
+				  
+				  <br></br>
+				  
+				  <br></br>
+				  
+				  <br></br>
+				  <br></br>
+				  <br></br>
+				  <br></br>
+				  <br></br>
+				  <br></br>
+				  <br></br>
+				 
+				  
+
+				  <!-- <br>Sound:</br>
+				  <div id="sound" class="btn-group" role="group" aria-label="Basic outlined example">
+					<button id="on" type="button" class="btn btn-outline-primary">ON</button>
+					<button  id="off" type="button" class="btn btn-outline-primary">OFF</button>
+				  </div> -->
+				  <!-- <br>Sound Material:</br>
+				  <div id="soundmat" class="btn-group" role="group" aria-label="Basic outlined example">
+					<button id="plasticsound" type="button" class="btn btn-outline-primary">Plastic</button>
+					<button  id="woodsound" type="button" class="btn btn-outline-primary">Wood</button>
+				  </div> -->
+
+
+				
+
+<!-- 
+				  objectnum,
+				  mass1,
+				  mass2,
+				  table1mat,
+				  table2mat,
+				  contobj1,
+				  contobj2,
+				  recordobj1,
+				  recordobj2,
+				  scrapesound1,
+				  scrapesound2,
+				  highdef, -->
+
+				  
+
+	      </div>
+    	</nav>
+
+		</div>
+
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script> -->
+    <script src="js/main.js"></script>
+	<script src="js/myjs.js"></script>
+  </body>
+</html>
